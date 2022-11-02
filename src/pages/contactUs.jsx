@@ -6,7 +6,7 @@ import { Button } from '@/components/Button'
 import { TextField } from '@/components/Fields'
 import { Logo } from '@/components/Logo'
 
-export default function Login() {
+export default function ContactUs() {
   return (
     <>
       <Head>
