@@ -31,8 +31,8 @@ const nextConfig = {
       path: '',
     }
   },
-  basePath: '',
-  assetPrefix: '',
+  basePath: '/CleanCityDubai',
+  assetPrefix: '/CleanCityDubai',
 }
 
 module.exports = nextConfig
