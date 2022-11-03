@@ -1,5 +1,5 @@
 {
-  "name": "tailwindui-salient",
+  "name": "Clean-City-Dubai",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,8 @@
     "start": "next start",
     "export": "next export",
     "lint": "next lint",
-    "host": "npm run dev"
+    "host": "npm run dev",
+    "start": "NODE_ENV=production node server.js"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {

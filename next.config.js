@@ -26,9 +26,13 @@ const nextConfig = {
     newNextLinkBehavior: true,
     scrollRestoration: true,
     images: {
-      allowFutureImage: true
+      allowFutureImage: true,
+      loader: 'akamai',
+      path: '',
     }
-  }
+  },
+  basePath: '',
+  assetPrefix: '',
 }
 
 module.exports = nextConfig
