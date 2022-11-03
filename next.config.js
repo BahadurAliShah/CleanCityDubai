@@ -25,11 +25,12 @@ const nextConfig = {
   experimental: {
     newNextLinkBehavior: true,
     scrollRestoration: true,
-    images: {
-      allowFutureImage: true,
-      loader: 'akamai',
-      path: '',
-    }
+
+  },
+  images: {
+    allowFutureImage: true,
+    loader: 'akamai',
+    path: '',
   },
   basePath: '/CleanCityDubai',
   assetPrefix: '/CleanCityDubai',
