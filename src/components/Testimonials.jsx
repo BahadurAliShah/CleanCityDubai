@@ -1,6 +1,6 @@
-export function Testimonials() {
+export function Testimonials(props) {
   return (
-      <section className="overflow-hidden bg-white">
+      <section id={"testimonials"} className="overflow-hidden bg-white">
         <div className="relative mx-auto max-w-7xl px-4 pt-20 pb-12 sm:px-6 lg:px-8 lg:py-20">
           <svg
               className="absolute top-full left-0 translate-x-80 -translate-y-24 transform lg:hidden"
@@ -73,8 +73,7 @@ export function Testimonials() {
               <blockquote className="relative">
                 <div className="text-2xl font-medium leading-9 text-gray-900">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias
-                    molestiae. Numquam corrupti in laborum sed rerum et corporis.
+                    {props.data["quote"]}
                   </p>
                 </div>
                 <footer className="mt-8">
@@ -87,8 +86,8 @@ export function Testimonials() {
                       />
                     </div>
                     <div className="ml-4 lg:ml-0">
-                      <div className="text-base font-medium text-gray-900">Judith Black</div>
-                      <div className="text-base font-medium text-indigo-600">CEO, Tuple</div>
+                      <div className="text-base font-medium text-gray-900">{props.data.personName}</div>
+                      <div className="text-base font-medium text-indigo-600">{props.data.designation}</div>
                     </div>
                   </div>
                 </footer>

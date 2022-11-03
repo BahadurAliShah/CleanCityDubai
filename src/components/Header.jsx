@@ -7,6 +7,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+import { PhoneNumber, Email } from "@/assets/constants";
 
 function MobileNavLink({ href, children }) {
   return (
@@ -77,9 +78,9 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="#features">Features</MobileNavLink>
+            <MobileNavLink href="#features">Services</MobileNavLink>
             <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
-            <MobileNavLink href="#pricing">Pricing</MobileNavLink>
+            <MobileNavLink href="#pricing">Clients</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
             <MobileNavLink href="/login">Sign in</MobileNavLink>
           </Popover.Panel>
@@ -99,19 +100,30 @@ export function Header() {
               <Logo className="h-10 w-auto" />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#features">Features</NavLink>
+              <NavLink href="#services">Services</NavLink>
               <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
+              <NavLink href="#clients">Clients</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:block">
-              <NavLink href="/login">Sign in</NavLink>
+              <NavLink href={"tel://+"+PhoneNumber}>
+                <img src={"/call.png"} width={"30"} height={"30"}/>
+              </NavLink>
             </div>
-            <Button href="/register" color="blue">
-              <span>
-                Get started <span className="hidden lg:inline">today</span>
-              </span>
+            <div className="hidden md:block">
+              <NavLink href={"mailto:"+Email}>
+                <img src={"/gmail.png"} width={"50"} height={"50"}/>
+              </NavLink>
+            </div>
+            <Button
+                variant="outline"
+                href={"https://api.whatsapp.com/send?phone="+PhoneNumber+"&amp;text=Hi%20Clean City Building Cleaning Services"}
+                id="whatsappnowbutton"
+                target="_blank"
+            >
+              <img src={"/WhatsApp.png"} height={"30"} width={"30"}/>
+              <span className="ml-3">Whatsapp Us Now</span>
             </Button>
             <div className="-mr-1 md:hidden">
               <MobileNavigation />

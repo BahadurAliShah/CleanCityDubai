@@ -1,5 +1,6 @@
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import {PhoneNumber} from "@/assets/constants";
 
 export function Hero() {
   return (
@@ -24,14 +25,14 @@ export function Hero() {
           and <b>DEDICATION</b> within our crews.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="tel://+923135820019">
+        <Button href={"tel://+"+PhoneNumber}>
             <img src={"/call.png"} width={"30"} height={"30"}/>
             <span className="ml-3">Call Us Now</span>
         </Button>
 
         <Button
           variant="outline"
-          href="https://api.whatsapp.com/send?phone=923135820019&amp;text=Hi%20Clean City Building Cleaning Services"
+          href={"https://api.whatsapp.com/send?phone="+PhoneNumber+"&amp;text=Hi%20Clean City Building Cleaning Services"}
           id="whatsappnowbutton"
           target="_blank"
         >
